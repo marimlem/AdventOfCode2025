@@ -1,17 +1,20 @@
 public class Dial {
     int number;
+    int zeroClicks;
 
     public Dial() {
         number = 50;
+        zeroClicks = 0;
     }
 
     public void rotateRight(int rotation) {
         int newnumber;
         newnumber = this.number + rotation;
-        
         while (newnumber > 99) {
             newnumber -= 100;
+            zeroClicks++;
         }
+
         this.number = newnumber;
 
         return ;
@@ -20,11 +23,18 @@ public class Dial {
     public void rotateLeft(int rotation) {
         int newnumber = this.number - rotation;
         // System.out.println("debug new number: " + newnumber);
-
+        if (newnumber < 0 && this.number == 0) {
+            zeroClicks--;
+        }
 
         while (newnumber < 0){
             newnumber += 100;
+            zeroClicks++;
         }
+        if (newnumber == 0) {
+            zeroClicks++;
+        }
+
         this.number = newnumber;
 
     }
@@ -39,5 +49,9 @@ public class Dial {
             rotateRight(rotation);
         }
         return this.number;
+    }
+
+    public int getZeroClicks() {
+        return this.zeroClicks;
     }
 }

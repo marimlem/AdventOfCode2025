@@ -52,7 +52,7 @@ public class Main {
                 line = myFileLineParser.getLine();
             }
             System.out.println("this is the final zero count: " + zeroCount);
-
+            System.out.println("zeroclicks: " + myDial.getZeroClicks());
 
 
 
