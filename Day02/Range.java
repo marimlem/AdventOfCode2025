@@ -41,7 +41,7 @@ public class Range {
 
             if (this.number_i == 565656) {
 
-                System.out.println("565656 whats happening " + number_s);
+                // System.out.println("565656 whats happening " + number_s);
             }
             // if (isRepeatedTwice(this.number_s) == 1) {
             //     this.sumOfIds += number_i;
@@ -84,7 +84,7 @@ public class Range {
                 continue ;
             }
         }
-        System.out.println("is all one number: " + id);
+        // System.out.println("is all one number: " + id);
         return 1;
     }
 // len = 8, divider = 4;
@@ -109,7 +109,7 @@ public class Range {
                 return 0; // not the same
             }
         }
-        System.out.println("set repeated: " + id);
+        // System.out.println("set repeated: " + id);
         return 1; // the set is repeated
     }
 
@@ -118,9 +118,9 @@ public class Range {
         int len = id.length();
         int divider = id.length() / 2;
 
-        if (this.number_i == 1188511885) {
-            System.out.println("debug time 1188511885");
-        }
+        // if (this.number_i == 1188511885) {
+            // System.out.println("debug time 1188511885");
+        // }
         while (divider >= 2 && len % divider != 0) {
             divider --;
         }

@@ -29,12 +29,13 @@ public class Main {
             Range myRange = new Range(ranges[0]);
             long totalSumOfIds = 0;
             int index = 0;
+            long startTime = System.nanoTime();
 
             while (true) {
 
-                System.out.println("\n---range: " + ranges[index] + "  ----");
+                // System.out.println("\n---range: " + ranges[index] + "  ----");
                 myRange.loopThroughIds();
-                System.out.println("sumOfIds range " + index +": " + myRange.getSumOfIds());
+                // System.out.println("sumOfIds range " + index +": " + myRange.getSumOfIds());
                 totalSumOfIds += myRange.getSumOfIds();
                 index++;
                 if (index >= ranges.length) {
@@ -44,6 +45,8 @@ public class Main {
                 myRange = new Range(ranges[index]);
                 
             }
+            long stopTime = System.nanoTime();
+            System.out.println((stopTime - startTime) / 1000000);
 
             System.out.println("total sum of ids: " + totalSumOfIds);
             // while (true) {
