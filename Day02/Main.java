@@ -32,7 +32,7 @@ public class Main {
 
             while (true) {
 
-                
+                System.out.println("\n---range: " + ranges[index] + "  ----");
                 myRange.loopThroughIds();
                 System.out.println("sumOfIds range " + index +": " + myRange.getSumOfIds());
                 totalSumOfIds += myRange.getSumOfIds();
