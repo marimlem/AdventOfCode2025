@@ -1,4 +1,8 @@
+package Day01;
 import java.io.IOException;
+
+import FileClasses.FileHandler;
+import FileClasses.FileLineParser;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,9 +12,9 @@ public class Main {
 
         String content;
         // read file class
-        // FileHandler myFileHandler = new FileHandler("/Users/luca.knobloch/repos/advent_of_code/day_01-0_debug.txt");
-        // FileHandler myFileHandler = new FileHandler("/Users/luca.knobloch/repos/advent_of_code/day_01-0_debug-testing.txt");
-        FileHandler myFileHandler = new FileHandler("/Users/luca.knobloch/repos/advent_of_code/day_01-0.txt");
+        // FileHandler myFileHandler = new FileHandler("/Users/luca.knobloch/repos/advent_of_code/Day01/day_01-0_debug.txt");
+        // FileHandler myFileHandler = new FileHandler("/Users/luca.knobloch/repos/advent_of_code/Day01/day_01-0_debug-testing.txt");
+        FileHandler myFileHandler = new FileHandler("/Users/luca.knobloch/repos/advent_of_code/Day01/day_01-0.txt");
         try {
             myFileHandler.readFile();
             // myFileHandler.printContent();

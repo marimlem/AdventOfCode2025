@@ -1,3 +1,4 @@
+package Day01;
 public class Dial {
     int number;
     int zeroClicks;

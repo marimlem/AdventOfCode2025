@@ -1,3 +1,4 @@
+package FileClasses;
 public class FileLineParser {
     String[] lines; //= content.split("\n");
     int pointer;
