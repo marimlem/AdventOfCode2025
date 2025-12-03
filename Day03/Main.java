@@ -20,15 +20,18 @@ public class Main {
             // day three  starts here
             Joltage myJoltage;
             int joltageSum = 0;
+            long joltageSumPart2 = 0;
             while (line != null) {
                 myJoltage = null;
                 myJoltage = new Joltage(line);
                 joltageSum += myJoltage.getDigitsAsInt();
-                
+                joltageSumPart2 += myJoltage.getDigitsAsIntPart2();
                 line = null;
                 line = myFileLineParser.getLine();
             }
             System.out.println("final result: " + joltageSum);
+            System.out.println("final result part 2: " + joltageSumPart2);
+
 
         } catch (IOException e) {
             e.printStackTrace();
