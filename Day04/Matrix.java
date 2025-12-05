@@ -32,6 +32,32 @@ public class Matrix {
 
     }
 
+    public void resetLayer() {
+        for (int i = 0; i < this.matrix.length; i++) {
+            for (int j = 0 ; j < this.matrix[i].length; j++) {
+                this.layer[i][j] = '0';
+            }
+            // System.out.println(this.matrix[i]);
+            // System.out.println(this.layer[i]);
+        }
+    }
+
+    public int removeBelowN(int n) {
+        this.x = 0;
+        this.y = 0;
+        int removedCount = 0;
+        while (true) {
+            if (this.matrix[this.y][this.x] == '@' && this.layer[this.y][this.x] < '4') {
+                this.matrix[this.y][this.x] = '.';
+                removedCount++;
+            }
+            if (traverseMatrix() == 1) {
+                break;
+            }
+        }
+        this.resetLayer();
+        return removedCount;
+    }
 
     public int countWhereBelowN(int n) {
         this.x = 0;
